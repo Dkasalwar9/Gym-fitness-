@@ -1,0 +1,65 @@
+{% extends "base.html" %} {% block title %} profile{% endblock title %} {% block head %}
+
+<h6> Enrollment Details </h6>
+
+
+<div class="container ">
+
+    <div class="row">
+        <div class="col-md-3"> </div>
+        <div class="col-md-6">
+            {% for message in messages %}
+            <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                <strong></strong>{{message}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %} {% for post in posts %}
+            <ul class="list-group">
+                <li class="list-group-item bg-dark text-white">
+                    <h6>Name:{{post.FullName}}</h6>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h6>Email:{{post.Email}}</h6>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h6>Gender:{{post.Gender}}</h6>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h6>PhoneNumber:{{post.PhoneNumber}}</h6>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h6>DOB:{{post.DOB}}</h6>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h6>Plan:{{post.SelectMembershipplan}}</h6>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h6>Trainer:{{post.SelectTrainer}}</h6>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h6>Reference:{{post.Reference}}</h6>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h6>Address:{{post.Address}}</h6>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h6>paymentStatus:{{post.paymentStatus}}</h6>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h6>Price:{{post.Price}}</h6>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h6>DueDate:{{post.DueDate}}</h6>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h6>timeStamp:{{post.timeStamp}}</h6>
+                </li>
+
+
+            </ul>
+            {% endfor %}
+
+
+        </div>
+    </div>
+    {% endblock head %}
